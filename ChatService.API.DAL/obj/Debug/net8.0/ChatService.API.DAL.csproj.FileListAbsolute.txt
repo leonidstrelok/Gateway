@@ -1,0 +1,17 @@
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\bin\Debug\net8.0\ChatService.API.DAL.deps.json
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\bin\Debug\net8.0\ChatService.API.DAL.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\bin\Debug\net8.0\ChatService.API.DAL.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\bin\Debug\net8.0\ChatService.API.Model.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\bin\Debug\net8.0\SharedLibrary.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\bin\Debug\net8.0\ChatService.API.Model.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\bin\Debug\net8.0\SharedLibrary.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatService.API.DAL.csproj.AssemblyReference.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatService.API.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatService.API.DAL.AssemblyInfoInputs.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatService.API.DAL.AssemblyInfo.cs
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatService.API.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatServ.A12E4533.Up2Date
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatService.API.DAL.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\refint\ChatService.API.DAL.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ChatService.API.DAL.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.DAL\obj\Debug\net8.0\ref\ChatService.API.DAL.dll

@@ -1,0 +1,11 @@
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\bin\Debug\net8.0\ChatService.API.Model.deps.json
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\bin\Debug\net8.0\ChatService.API.Model.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\bin\Debug\net8.0\ChatService.API.Model.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\ChatService.API.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\ChatService.API.Model.AssemblyInfoInputs.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\ChatService.API.Model.AssemblyInfo.cs
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\ChatService.API.Model.csproj.CoreCompileInputs.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\ChatService.API.Model.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\refint\ChatService.API.Model.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\ChatService.API.Model.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\ChatService.API.Model\obj\Debug\net8.0\ref\ChatService.API.Model.dll

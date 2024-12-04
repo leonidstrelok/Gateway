@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AuthService.API.DAL\AuthService.API.DAL.csproj" />
+      <ProjectReference Include="..\AuthService.API.Model\AuthService.API.Model.csproj" />
+    </ItemGroup>
+
+</Project>

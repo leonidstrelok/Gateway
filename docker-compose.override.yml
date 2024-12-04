@@ -1,0 +1,15 @@
+services:
+  authserviceapi:
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=${MSSQL_HOST};Database=${MSSQL_AUTH_API_DB};User Id=${MSSQL_USER};Password=${MSSQL_PASSWORD};TrustServerCertificate=True;
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/certificate.pfx
+      - Kestrel__Certificates__Default__Password=your-password
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - gateway_service_network
+    volumes:
+      - ./certs:/https:ro

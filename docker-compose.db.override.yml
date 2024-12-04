@@ -1,0 +1,19 @@
+services:
+  mssqldb:
+    ports:
+      - 1433:1433
+    volumes:
+      - mssql-db:/var/opt/mssql
+    environment:
+      SA_PASSWORD: ${MSSQL_PASSWORD}
+      ACCEPT_EULA: "Y"
+    networks:
+      - gateway_service_network
+  
+  redisdb:
+    ports:
+      - 6379:6379
+    volumes:
+      - redis-db:/data
+    environment:
+      REQUIREPASS: ${REDIS_PASSWORD}

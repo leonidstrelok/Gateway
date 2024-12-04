@@ -1,0 +1,12 @@
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\bin\Debug\net8.0\NotificationService.API.BLL.deps.json
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\bin\Debug\net8.0\NotificationService.API.BLL.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\bin\Debug\net8.0\NotificationService.API.BLL.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\NotificationService.API.BLL.csproj.AssemblyReference.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\NotificationService.API.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\NotificationService.API.BLL.AssemblyInfoInputs.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\NotificationService.API.BLL.AssemblyInfo.cs
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\NotificationService.API.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\NotificationService.API.BLL.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\refint\NotificationService.API.BLL.dll
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\NotificationService.API.BLL.pdb
+C:\Users\Leonid\RiderProjects\GatewayService.API\NotificationService.API.BLL\obj\Debug\net8.0\ref\NotificationService.API.BLL.dll

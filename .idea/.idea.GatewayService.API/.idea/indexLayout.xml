@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UserContentModel">
+    <attachedFolders />
+    <explicitIncludes>
+      <Path>.env</Path>
+      <Path>docker-compose.db.override.yml</Path>
+      <Path>docker-compose.db.yml</Path>
+      <Path>docker-compose.override.yml</Path>
+      <Path>docker-compose.yml</Path>
+      <Path>run-containers.ps1</Path>
+      <Path>run-containers.sh</Path>
+    </explicitIncludes>
+    <explicitExcludes />
+  </component>
+</project>

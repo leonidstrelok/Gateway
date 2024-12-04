@@ -1,0 +1,11 @@
+services:
+  authserviceapi:
+    container_name: auth_service_api
+    build:
+      context: .
+      dockerfile: AuthService.API/Dockerfile
+    restart: always
+
+
+networks:
+  gateway_service_network:

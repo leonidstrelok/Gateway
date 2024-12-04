@@ -1,0 +1,13 @@
+services:
+  mssqldb:
+    container_name: mssqldb
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    
+  redisdb:
+    container_name: redisdb
+    image: redis:latest
+    restart: always
+    
+volumes:
+  mssql-db:

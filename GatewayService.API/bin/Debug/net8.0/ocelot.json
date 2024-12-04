@@ -1,0 +1,98 @@
+{
+    "Routes": [
+      {
+        "RequestIdKey": "Auth-Service",
+        "DownstreamPathTemplate": "/api/auth/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5036
+          }
+        ],
+        "UpstreamPathTemplate": "/api/auth/{everything}",
+        "UpstreamHttpMethod": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ]
+      },
+      {
+        "RequestIdKey": "Chat-Service",
+        "DownstreamPathTemplate": "/api/chat/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5242
+          }
+        ],
+        "UpstreamPathTemplate": "/api/chat/{everything}",
+        "UpstreamHttpMethod": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ]
+      },
+      {
+        "RequestIdKey": "Chat-Hub-Service",
+        "DownstreamPathTemplate": "/chatHub/{everything}",
+        "DownstreamScheme": "ws",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5242
+          }
+        ],
+        "UpstreamPathTemplate": "/chatHub/{everything}",
+        "UpstreamHttpMethod": [
+          "GET",
+          "POST"
+        ],
+        "RouteIsCaseSensitive": false,
+        "EnableWebSockets": true
+      },
+      {
+        "RequestIdKey": "Notification-Service",
+        "DownstreamPathTemplate": "/api/notification/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5279
+          }
+        ],
+        "UpstreamPathTemplate": "/api/notification/{everything}",
+        "UpstreamHttpMethod": [
+          "Get",
+          "Post",
+          "Put",
+          "Delete"
+        ]
+      },
+      {
+        "RequestIdKey": "User-Status-Service",
+        "DownstreamPathTemplate": "/api/status/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 5286
+          }
+        ],
+        "UpstreamPathTemplate": "/api/status/{everything}",
+        "UpstreamHttpMethod": [
+          "Get",
+          "Post",
+          "Put",
+          "Delete"
+        ]
+      }
+    ],
+    "GlobalConfiguration": {
+      "RequestIdKey": "Gateway-Service-API",
+      "BaseUrl": "http://localhost:5079"
+    }
+}
