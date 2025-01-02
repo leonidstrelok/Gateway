@@ -9,10 +9,31 @@ public static class Program
 {
     private static async Task Main(string[] args)
     {
-        var username = PromptForInput("Enter your name: ");
-        var password = PromptForInput("Enter your password: ");
+        var token = string.Empty;
+        var isFinishedGetToken = false;
+        while (!isFinishedGetToken)
+        {
+            Console.WriteLine("\nOptions:");
+            Console.WriteLine();
+            Console.WriteLine("1. Registration");
+            Console.WriteLine("2. Authorization");
+            var registerOrLogin = PromptForInput("Please select options: ");
+            var username = PromptForInput("Enter your name: ");
+            var password = PromptForInput("Enter your password: ");
+            switch (registerOrLogin)
+            {
+                case "1":
+                    var email = PromptForInput("Enter your email: ");
+                    token = await AuthorizationRequestResponse.RegistrationAsync(username, password, email);
+                    if (!string.IsNullOrEmpty(token)) isFinishedGetToken = true;
+                    break;
+                case "2":
+                    token = await AuthorizationRequestResponse.AuthenticateAsync(username, password);
+                    if (!string.IsNullOrEmpty(token)) isFinishedGetToken = true;
+                    break;
+            }
+        }
 
-        var token = await AuthorizationRequestResponse.AuthenticateAsync(username, password);
         var userId = MainAuxiliary.ExtractUserIdFromToken(token);
 
         var connection = CreateHubConnectionAsync(token);

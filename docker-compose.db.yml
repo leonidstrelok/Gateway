@@ -11,3 +11,4 @@ services:
     
 volumes:
   mssql-db:
+  redis-db:
