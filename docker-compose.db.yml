@@ -9,6 +9,16 @@ services:
     image: redis:latest
     restart: always
     
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    restart: always
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    restart: always
+    
 volumes:
   mssql-db:
   redis-db:

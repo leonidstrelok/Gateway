@@ -11,13 +11,14 @@ public class UserStatusService(IConnectionMultiplexer redis) : IUserStatusServic
 
     private const string UserStatusKey = "user_status";
 
-    public async Task SetUserStatusAsync(string userId, bool isOnline)
+    public async Task SetUserStatusAsync(string userId, bool isOnline, string email)
     {
         var status = new UserStatus()
         {
             UserId = userId,
             IsOnline = isOnline,
-            LastActivity = DateTime.UtcNow
+            LastActivity = DateTime.UtcNow,
+            Email = email
         };
 
         var serializedStatus = JsonSerializer.Serialize(status);
@@ -25,7 +26,7 @@ public class UserStatusService(IConnectionMultiplexer redis) : IUserStatusServic
 
         if (!isOnline)
         {
-            await _db.KeyExpireAsync($"{UserStatusKey}:{userId}", TimeSpan.FromMinutes(15));
+            await _db.KeyExpireAsync($"{UserStatusKey}:{userId}", TimeSpan.FromMinutes(20));
         }
     }
 
@@ -42,6 +43,17 @@ public class UserStatusService(IConnectionMultiplexer redis) : IUserStatusServic
             .Where(p => !p.Value.IsNullOrEmpty)
             .Select(p => JsonSerializer.Deserialize<UserStatus>(p.Value!))
             .Where(p => p is not null && p.IsOnline)
+            .ToList()!;
+    }
+
+    public async Task<IEnumerable<UserStatus>> GetAllOfflineUsersAsync()
+    {
+        var statuses = await _db.HashGetAllAsync(UserStatusKey);
+        var fiveMinutesAgo = DateTimeOffset.UtcNow.AddMinutes(-5);
+        return statuses
+            .Where(p => !p.Value.IsNullOrEmpty)
+            .Select(p => JsonSerializer.Deserialize<UserStatus>(p.Value!))
+            .Where(p => p is not null && !p.IsOnline && p.LastActivity <= fiveMinutesAgo)
             .ToList()!;
     }
 }

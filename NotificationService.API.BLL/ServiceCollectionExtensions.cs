@@ -1,4 +1,11 @@
 ﻿using FluentEmail.MailKitSmtp;
+using MessageBroker.BackgroundServices;
+using MessageBroker.Configurations;
+using MessageBroker.Enums;
+using MessageBroker.Interfaces;
+using MessageBroker.Models;
+using MessageBroker.Services;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NotificationService.API.BLL.Interfaces;
 using NotificationService.API.BLL.Services;
@@ -8,7 +15,7 @@ namespace NotificationService.API.BLL;
 
 public static class ServiceCollectionExtensions
 {
-    public static void AddBllServiceCollection(this IServiceCollection services)
+    public static void AddBllServiceCollection(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
         services.AddHostedService<NotificationWorker>();
@@ -24,5 +31,26 @@ public static class ServiceCollectionExtensions
                 RequiresAuthentication = true,
                 UseSsl = true
             });
+        ConfigurationKafka(services, configuration);
+    }
+
+    private static void ConfigurationKafka(IServiceCollection services, IConfiguration configuration)
+    {
+        var kafkaConfig = configuration.GetSection("Kafka").Get<KafkaConfig>();
+
+        services.AddSingleton<IMessageHandler, EmailMessageHandler>();
+        services.AddSingleton<EmailMessageHandler>();
+
+        services.AddSingleton<IEventSubscriber>(
+            sp =>
+            {
+                var handlers = new Dictionary<EventType, IMessageHandler>
+                {
+                    { EventType.SendEmailMessage, sp.GetRequiredService<EmailMessageHandler>() },
+                };
+                return new KafkaSubscriber(kafkaConfig!.BootstrapServers, KafkaGroups.ChatNotificationGroup,
+                    kafkaConfig!.UserServiceNotificationTopic, handlers);
+            });
+        services.AddHostedService<KafkaSubscriberHostedService>();
     }
 }

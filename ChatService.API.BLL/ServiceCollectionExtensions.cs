@@ -1,6 +1,10 @@
 ﻿using System.Text;
 using ChatService.API.BLL.Interfaces;
 using ChatService.API.BLL.Services;
+using MessageBroker.Configurations;
+using MessageBroker.Enums;
+using MessageBroker.Interfaces;
+using MessageBroker.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -48,5 +52,7 @@ public static class ServiceCollectionExtensions
                 }
             };
         });
+
+        services.AddSingleton<IEventPublisher, KafkaPublisher>();
     }
 }

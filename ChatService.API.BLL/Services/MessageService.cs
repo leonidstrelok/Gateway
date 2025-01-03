@@ -90,4 +90,14 @@ public class MessageService(IApplicationDbContext dbContext) : IMessageService
         };
         await dbContext.SaveChangesAsync(group, SaveChangeType.Add);
     }
+
+    public async Task<bool> MarkMessageAsRead(Guid messageId)
+    {
+        var message = await dbContext.Set<Message>().FindAsync(messageId);
+        if (message is null) return false;
+
+        message.IsRead = true;
+        await dbContext.SaveChangesAsync(message, SaveChangeType.Update);
+        return true;
+    }
 }

@@ -14,6 +14,7 @@ public class AuthorizationRequestResponse
         {
             Console.WriteLine(
                 "Sorry with server response with not successfully status( Please repeat through 5 or 10 minutes");
+            return "";
         }
 
         return await AuthenticateAsync(username, password);

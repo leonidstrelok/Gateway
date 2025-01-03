@@ -11,4 +11,5 @@ public interface IMessageService
     Task<bool> DeleteMessageAsync(Guid messageId);
     Task<Guid> GetGroupByName(string groupName);
     Task CreateGroup(string groupName);
+    Task<bool> MarkMessageAsRead(Guid messageId);
 }
