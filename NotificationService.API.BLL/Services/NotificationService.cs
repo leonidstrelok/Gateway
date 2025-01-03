@@ -5,20 +5,20 @@ namespace NotificationService.API.BLL.Services;
 
 public class NotificationService(IBackgroundTaskQueue backgroundTaskQueue) : INotificationService
 {
-    public async Task EnqueueNotificationAsync(string userId, string email, string message)
+    public async Task EnqueueNotificationAsync(string email)
     {
         await backgroundTaskQueue.QueueBackgroundWorkItemAsync(async _ =>
         {
-            await SendEmailNotificationAsync(email, message);
+            await SendEmailNotificationAsync(email);
         });
     }
 
-    private async Task SendEmailNotificationAsync(string email, string message)
+    private async Task SendEmailNotificationAsync(string email)
     {
         var emailSender = new Email("noreply@example.com")
             .To(email)
             .Subject("Unread Message Notification")
-            .Body($"You have an unread message: {message}");
+            .Body($"You have an unread message");
 
         await emailSender.SendAsync();
     }

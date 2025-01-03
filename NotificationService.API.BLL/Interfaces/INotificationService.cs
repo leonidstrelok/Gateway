@@ -2,5 +2,5 @@
 
 public interface INotificationService
 {
-    Task EnqueueNotificationAsync(string userId, string email, string message);
+    Task EnqueueNotificationAsync(string email);
 }

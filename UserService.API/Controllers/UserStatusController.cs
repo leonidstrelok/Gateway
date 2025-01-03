@@ -13,7 +13,7 @@ public class UserStatusController(IUserStatusService userStatusService) : Contro
     [HttpPost("set")]
     public async Task<IActionResult> SetUserStatus([FromBody] UserStatus request)
     {
-        await userStatusService.SetUserStatusAsync(request.UserId, request.IsOnline);
+        await userStatusService.SetUserStatusAsync(request.UserId, request.IsOnline, request.Email);
         return Ok("User status updated");
     }
 

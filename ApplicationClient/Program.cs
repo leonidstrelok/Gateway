@@ -1,5 +1,4 @@
 ﻿using ApplicationClient.Auxiliary;
-using ApplicationClient.Models;
 using ApplicationClient.RequestResponses;
 using Microsoft.AspNetCore.SignalR.Client;
 

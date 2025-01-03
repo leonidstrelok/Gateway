@@ -10,6 +10,7 @@
       <ProjectReference Include="..\ChatService.API.DAL\ChatService.API.DAL.csproj" />
       <ProjectReference Include="..\ChatService.API.Model\ChatService.API.Model.csproj" />
       <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj" />
+      <ProjectReference Include="..\src\SharedLibrary\MessageBroker\MessageBroker.csproj" />
     </ItemGroup>
 
     <ItemGroup>

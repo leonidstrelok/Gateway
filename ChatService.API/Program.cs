@@ -1,6 +1,7 @@
 using ChatService.API.BLL;
 using ChatService.API.BLL.Services;
 using ChatService.API.DAL;
+using MessageBroker.Configurations;
 
 namespace ChatService.API;
 
@@ -17,6 +18,7 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+        builder.Services.Configure<KafkaConfig>(builder.Configuration.GetSection("Kafka"));
         builder.Services.AddDalServiceCollection(builder.Configuration);
         builder.Services.AddBllServiceCollection(builder.Configuration);
 

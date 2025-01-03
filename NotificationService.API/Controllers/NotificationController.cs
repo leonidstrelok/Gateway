@@ -10,9 +10,9 @@ public class NotificationController(INotificationService notificationService) : 
     [HttpPost("send")]
     public async Task<IActionResult> SendNotification([FromBody] NotificationRequest request)
     {
-        await notificationService.EnqueueNotificationAsync(request.UserId, request.Email, request.Message);
+        await notificationService.EnqueueNotificationAsync(request.Email);
         return Ok("Notification enqueued successfully");
     }
 }
 
-public record NotificationRequest(string UserId, string Email, string Message);
+public record NotificationRequest(string Email);
